@@ -1,3 +1,11 @@
+/* page margin reset to 0*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* the main container as grid with 2 rows 2 columns */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 6fr;
@@ -5,6 +13,7 @@
   grid-gap: 10px;
 }
 
+/* the side bar made of grid column layout for responsivness*/
 .sidebar {
   background-color: #3ab0ff;
   grid-area: 1/1/3/2;
@@ -14,6 +23,7 @@
   align-items: center;
   color: white;
   font-size: larger;
+  height: 100vh;
 }
 
 .sidebar button {
@@ -24,9 +34,11 @@
   display: flex;
 }
 
-.sidebar-bot {
+/* .sidebar-bot {
   height: 30vh;
-}
+} */
+
+/* the navbar as grid layout of 2 rows and 2 columns*/
 
 .navbar {
   grid-area: 1/2/2/3;
@@ -37,13 +49,33 @@
   align-items: center;
 }
 
-.navbar-items input {
-  width: 75%;
+.navbar-items1 input {
+  height: 30px;
+  text-align: right;
+  border-style: none;
+  background-color: #f7f7f7;
+  width: 85%;
   border-radius: 50px;
   margin-left: 40px;
 }
 
-.navbar-items button {
+.navbar-items2 {
+  text-align: right;
+  margin-right: 100px;
+}
+
+.navbar-items3 {
+  text-align: left;
+  margin-left: 100px;
+}
+
+.navbar-items4 {
+  text-align: right;
+  margin-right: 80px;
+}
+
+.navbar-items4 button {
+  border-style: none;
   border-radius: 15px;
   background-color: #3ab0ff;
   color: white;
@@ -52,10 +84,14 @@
   margin: 0 10px;
 }
 
-.content {
-  grid-area: 2/2/3/3;
+/* content div */
+
+.content-flex {
+  flex-direction: column;
+  display: flex;
+}
+
+.content-items-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-template-rows: 2fr 10fr 1fr 10fr 1fr 10fr 2fr;
 }
